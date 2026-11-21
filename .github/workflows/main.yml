@@ -14,7 +14,7 @@ jobs:
           channel: stable
       - run: flutter create app --platforms=android
       - run: cp lib/main.dart app/lib/main.dart
-      - run: cd app && flutter build apk --release
+      - run: cd app && flutter build apk --release --target-platform android-arm64
       - uses: actions/upload-artifact@v4
         with:
           name: app-apk
